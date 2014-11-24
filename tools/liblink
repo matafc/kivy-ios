@@ -76,4 +76,4 @@ f.close()
 print('Liblink redirect linking with', objects)
 subprocess.call([
     environ.get('ARM_LD'), '-r',
-    '-o', output + '.o', '-arch', 'armv7'] + objects)
+    '-o', output + '.o', '-arch', environ.get('CPU_ARCHITECHTURE')] + objects)
